@@ -1,26 +1,22 @@
-package com.example.practica01
+package com.example.practica02
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.practica01.ui.theme.Practica01Theme
+import com.example.practica02.ui.theme.Practica02Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Practica01Theme {
-
-                AppNavigation()
+            Practica02Theme {
+                CalculatorScreen()
             }
         }
     }
@@ -37,7 +33,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    Practica01Theme {
+    Practica02Theme {
         Greeting("Android")
     }
 }
